@@ -8,6 +8,10 @@ mkdir -p .vim/tmp
 
 # get the script dir
 dir=`pwd`
+end=`dirname $0`
+if [[ $end != "." ]]; then
+	dir=$dir"/"$end
+fi
 
 #create symlink
 cd
