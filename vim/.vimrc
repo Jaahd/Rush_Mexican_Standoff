@@ -24,11 +24,14 @@ set number
 " syntax coloration
 syntax on
 
-" more pertinant indentation?
+" more pertinant indentation
 set smartindent
 
 " automatic indentation
 set autoindent
+
+" highlight cursor colulmn
+set cursorcolumn
 
 " cursor position in status bar
 set ruler
@@ -36,6 +39,10 @@ set ruler
 " tabulation length
 set shiftwidth=4
 set tabstop=4
+
+" hightlight extra whitespaces before return
+highlight ExtraWhitespace ctermbg=lightblue guibg=lightblue
+autocmd BufRead * match ExtraWhitespace /\s\+$\| \{2,\}/
 
 " put all backup and swap in one place
 set backupdir=~/.vim/tmp,~/.tmp,~/tmp,/tmp
