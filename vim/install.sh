@@ -3,15 +3,15 @@
 #del previous conf
 rm -rf $HOME/.vim $HOME/.vimrc
 
-#create tmp dir
-mkdir -p .vim/tmp
-
 # get the script dir
 dir=`pwd`
 end=`dirname $0`
 if [[ $end != "." ]]; then
 	dir=$dir"/"$end
 fi
+
+#create tmp dir
+mkdir -p $dir/.vim/tmp
 
 #create symlink
 cd
